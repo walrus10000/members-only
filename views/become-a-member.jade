@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class="create-posts-container")
+    h1(class="title") Become a member
+    p(class="description") Enter the super secret password to become an exclusive member
+    if errors
+      for error in errors
+        div(class="error-message")= error.msg
+    form(action="" method="post")
+      input(class="text-input" id="secretPassword" name="secretPassword" type="text" placeholder="Secret password" maxlength="50" required)
+      div(class="button-row")
+        a(href="/" class="button secondary-button") Cancel
+        button(class="button primary-button") Submit

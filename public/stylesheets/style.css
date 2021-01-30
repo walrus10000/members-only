@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Molengo&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --body-background-color: #f5f5f5;
+  --header-background-color: #faf9f9;
+  --posts-background-color: #f9f9f9;
+
+  --main-font-color: #606060;
+  --secondary-font-color: #a7a7a7;
+  --gold-font-color: #c3a538;
+
+  --error-border-color: #df7e7e;
+  --error-background-color: #dea6a6;
+  --error-text-color: #711414;
+
+  --roboto-font: "Roboto", sans-serif;
+  --merriweather-font: "Merriweather", serif;
+  --molengo-font: "Molengo", sans-serif;
+
+  font: 35px "Roboto", sans-serif;
+  color: var(--main-font-color);
+  background-color: var(--body-background-color);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* HEADER STYLES */
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 75px;
+  background-color: var(--header-background-color);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: var(--molengo-font);
+  font-size: 40px;
+  letter-spacing: 0.15em;
+}
+
+i {
+  color: var(--gold-font-color);
+  box-shadow: inset 0px 10px 10px rgba(255, 255, 255, 1);
+  font-size: 35px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+/* MAIN STYLES */
+
+main {
+  padding: 0 75px;
+}
+
+.posts-container,
+.create-posts-container {
+  background-color: var(--posts-background-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23c3a538' fill-opacity='0.18'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  border-radius: 10px;
+  margin: 50px 0;
+  box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.02);
+  border-top: 15px solid var(--gold-font-color);
+}
+
+.create-posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+label {
+  color: var(--secondary-font-color);
+  font-weight: bold;
+}
+
+.input-wrapper {
+  width: 90%;
+}
+
+.name-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#firstname {
+  margin-right: 25px;
+}
+
+#lastname {
+  margin-left: 25px;
+}
+
+.text-input {
+  font-size: 35px;
+  border: 1px solid var(--secondary-font-color);
+  border-radius: 2px;
+  padding: 20px;
+  display: block;
+  margin-bottom: 50px;
+  width: 100%;
+  color: var(--main-font-color);
+}
+
+textarea {
+  box-sizing: border-box;
+  display: block;
+  font-size: 35px;
+  resize: none;
+  width: 90%;
+  border: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  color: var(--main-font-color);
+}
+
+.button-row {
+  /* padding-top: 25px; */
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--merriweather-font);
+  font-weight: bold;
+  color: var(--gold-font-color);
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px #ffffff 30% inset;
+  margin: 70px 0 40px 0;
+}
+
+.description {
+  color: var(--secondary-font-color);
+  text-align: center;
+}
+
+.create-post-button {
+  position: relative;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* FOOTER STYLES */
+
+footer {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* OTHER */
+
+.no-link-styles {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.icon-link {
+  font-size: 50px;
+}
+
+.button {
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 25px 50px;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2),
+    0px -5px 0px rgba(195, 165, 56, 0.6);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.primary-button {
+  background-color: var(--gold-font-color);
+  color: var(--posts-background-color);
+}
+
+.secondary-button {
+  background-color: var(--body-background-color);
+  color: var(--main-font-color);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1),
+    0px -5px 0px rgba(236, 236, 236, 0.75);
+}
+
+.error-message {
+  padding: 10px 25px;
+  border: 2px solid var(--error-border-color);
+  background-color: var(--error-background-color);
+  border-radius: 2px;
+  color: var(--error-text-color);
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.error-message:last-of-type {
+  margin-bottom: 0;
+}

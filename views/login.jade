@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="create-posts-container")
+    h1(class="title") Log in
+    if messages
+      for message in messages
+        div(class="error-message")= message
+    form(action="" method="post")
+      div(class="input-wrapper")
+        input(class="text-input" id="email" name="email" type="text" placeholder="Email" required)
+        input(class="text-input" id="password" name="password" type="password" placeholder="Password" minlength="8" required)
+      div(class="button-row")
+        a(href="/" class="button secondary-button") Cancel
+        button(class="button primary-button") Submit

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://kit.fontawesome.com/c4e75aef8c.js" crossorigin="anonymous")
+  body
+    header
+      div
+        a(class="no-link-styles" href="/")
+          div(class="logo")
+            i(class="fas fa-archway")
+            |  Arch
+      ul(class="menu")
+        li
+          a(class="menu-item no-link-styles" href="/login") Login
+        li
+          a(class="menu-item no-link-styles" href="/signup") Signup
+    main
+      block content
+    footer
+      div
+        a(class="no-link-styles" href="/")
+          div(class="logo")
+            i(class="fas fa-archway")
+            |  Arch
+      a(href="#")
+        i(class="fab fa-github-square icon-link")

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div(class="create-posts-container")
+    h1(class="title") Create post
+    form(action="" method="post")
+      textarea(name="text" rows="10" placeholder="Type here..." required)
+      div(class="button-row")
+        a(href="/" class="button secondary-button") Cancel
+        button(class="button primary-button") Submit
